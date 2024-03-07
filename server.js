@@ -5,7 +5,13 @@ const http = require("http");
 
 // created server
 const server = http.createServer((req, res)=>{
-
+    console.log(req.url)
+    if(req.url == "/product"){
+        return res.end("this is product page")
+    }
+    else if(req.url == "/user"){
+        return res.end("this is user page")
+    }
     // here comes teh response
     res.end("Hello macha!")
 })
